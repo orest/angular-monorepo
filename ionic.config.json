@@ -1,0 +1,20 @@
+{
+  "projects": {
+    "ntx": {
+      "name": "ntx",
+      "integrations": {
+        "cordova": {}
+      },
+      "type": "angular",
+      "root": "projects/ntx"
+    },
+    "rammy": {
+      "name": "rammy",
+      "integrations": {
+        "cordova": {}
+      },
+      "type": "angular",
+      "root": "projects/rammy"
+    }
+  }
+}

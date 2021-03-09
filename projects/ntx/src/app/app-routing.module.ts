@@ -11,11 +11,16 @@ const routes: Routes = [
     loadChildren: () => import('cws-shared-lib').then( m => m.NtxLoginPageModule)
   },
   {
+    path: 'custom',
+    loadChildren: () => import('cws-shared-lib').then( m => m.CustomPageModule)
+  },
+
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
   },
- 
+
 ];
 
 @NgModule({

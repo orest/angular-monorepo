@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CwsSharedLibService } from 'cws-shared-lib';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  user = null;
+  constructor(private sharedService: CwsSharedLibService) {
 
-  constructor() {}
+  }
+
+  getData() {
+    this.sharedService.getData().subscribe(res => {
+      console.log(res);
+      this.user = res;
+    });
+  }
 
 }

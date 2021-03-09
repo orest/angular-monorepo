@@ -12,12 +12,18 @@
   </ion-header>
 
   <div id="container">
-
     <div>
-        <a routerLink='/login' >Login</a>
+      <cws-shared-c></cws-shared-c>
+      <ion-button expand="full" (click)="getData()">Load Data</ion-button>
+      <ion-button expand="full" [routerLink]="['/custom']" routerLinkActive="router-link-active"  >Go Custom</ion-button>
+
+      <ion-card *ngIf="user">
+        <img [src]="user.picture.large" alt="" />
+        <ion-card-content> {{user.email}} </ion-card-content>
+      </ion-card>
     </div>
-
-
-
+    <div>
+      <a routerLink="/login">Login</a>
+    </div>
   </div>
 </ion-content>

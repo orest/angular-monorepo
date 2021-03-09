@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-import { CwsSharedLibModule } from 'cws-shared-lib'
+import { CwsSharedLibModule, CwsSharedLibService } from 'cws-shared-lib'
 
 @NgModule({
   imports: [
@@ -17,4 +17,6 @@ import { CwsSharedLibModule } from 'cws-shared-lib'
   ],
   declarations: [HomePage]
 })
-export class HomePageModule { }
+export class HomePageModule {
+
+}

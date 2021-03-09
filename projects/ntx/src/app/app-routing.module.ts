@@ -7,10 +7,15 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
+    path: 'login',
+    loadChildren: () => import('cws-shared-lib').then( m => m.NtxLoginPageModule)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
   },
+ 
 ];
 
 @NgModule({

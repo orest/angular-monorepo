@@ -2,5 +2,46 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "cwsSharedLib": {
+      "projectType": "library",
+      "root": "projects/cws-shared-lib",
+      "sourceRoot": "projects/cws-shared-lib/src",
+      "prefix": "cws",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/cws-shared-lib/tsconfig.lib.json",
+            "project": "projects/cws-shared-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/cws-shared-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/cws-shared-lib/src/test.ts",
+            "tsConfig": "projects/cws-shared-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/cws-shared-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/cws-shared-lib/tsconfig.lib.json",
+              "projects/cws-shared-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }},
+  "defaultProject": "cwsSharedLib"
 }

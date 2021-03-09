@@ -12,12 +12,22 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "es2020",
-    "lib": ["es2018", "dom"]
+    "lib": ["es2018", "dom"],
+    "paths": {
+      "@angular/*": [
+        "./node_modules/@angular/*"
+      ],
+      "cws-shared-lib": [
+        "../../dist/cws-shared-lib/cws-shared-lib",
+        "../../dist/cws-shared-lib"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
-  }
+  },
+
 }

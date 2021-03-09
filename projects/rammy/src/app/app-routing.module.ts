@@ -5,7 +5,12 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  }
+
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('cws-shared-lib').then( m => m.RammyLoginPageModule)
+  },
 ];
 @NgModule({
   imports: [

@@ -5,15 +5,16 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-
+import { CwsSharedLibModule } from 'cws-shared-lib'
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    CwsSharedLibModule
   ],
   declarations: [HomePage]
 })
-export class HomePageModule {}
+export class HomePageModule { }

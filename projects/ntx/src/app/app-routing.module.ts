@@ -1,19 +1,20 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
+
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
   {
     path: 'login',
-    loadChildren: () => import('cws-shared-lib').then( m => m.NtxLoginPageModule)
+    loadChildren: () => import('cws-shared-lib').then(m => m.NtxLoginPageModule)
   },
-  {
-    path: 'custom',
-    loadChildren: () => import('cws-shared-lib').then( m => m.CustomPageModule)
-  },
+   {
+     path: 'custom',
+     loadChildren: () => import('cws-shared-lib').then( m => m.CustomPageModule)
+   },
 
   {
     path: '',

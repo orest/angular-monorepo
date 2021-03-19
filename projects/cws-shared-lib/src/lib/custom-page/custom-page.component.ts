@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CustomPageService } from './custom-page.service';
 
 @Component({
   selector: 'cws-custom-page',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private pageService: CustomPageService) { }
 
   ngOnInit(): void {
+  }
+
+  getData() {
+    return this.pageService.getData().subscribe((result) => {
+
+
+    })
   }
 
 }

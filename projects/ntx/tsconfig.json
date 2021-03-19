@@ -20,7 +20,8 @@
       "cws-shared-lib": [
         "../../dist/cws-shared-lib/cws-shared-lib",
         "../../dist/cws-shared-lib"
-      ]
+      ],
+  
     }
   },
   "angularCompilerOptions": {

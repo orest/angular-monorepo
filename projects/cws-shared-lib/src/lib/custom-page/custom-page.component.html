@@ -11,7 +11,17 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">Hello From Shared page
-    
+  <div id="container">
+    <ion-title> Hello From Shared page </ion-title>
+    <ion-button expand="full" (click)="getData()"> Load Data</ion-button>
+<ion-card>
+  <ion-card-header>
+    <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
+    <ion-card-title>Awesome Title</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    Awesome content
+  </ion-card-content>
+</ion-card>
   </div>
 </ion-content>
